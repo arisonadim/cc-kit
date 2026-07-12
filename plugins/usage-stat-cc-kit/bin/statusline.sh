@@ -1,7 +1,8 @@
 #!/bin/bash
 input=$(cat)
-used=$(echo "$input" | grep -o '"used_percentage":[0-9.]*' | grep -o '[0-9.]*$')
-reset=$(echo "$input" | grep -o '"resets_at":[0-9]*' | grep -o '[0-9]*$')
+five_hour=$(echo "$input" | grep -o '"five_hour":{[^}]*}')
+used=$(echo "$five_hour" | grep -o '"used_percentage":[0-9.]*' | grep -o '[0-9.]*$' | head -1)
+reset=$(echo "$five_hour" | grep -o '"resets_at":[0-9]*' | grep -o '[0-9]*$' | head -1)
 used=${used:-0}
 reset=${reset:-0}
 now=$(date +%s)
