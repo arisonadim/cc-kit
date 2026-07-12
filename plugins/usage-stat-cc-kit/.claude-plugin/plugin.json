@@ -1,0 +1,8 @@
+{
+  "name": "usage-stat-cc-kit",
+  "description": "Usage statistics plugin for Claude Code",
+  "author": {
+    "name": "Dmitry E.",
+    "url": "https://github.com/arisonadim"
+  }
+}

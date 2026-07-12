@@ -1,0 +1,14 @@
+{
+  "name": "cc-kit",
+  "owner": {
+    "name": "Dmitry E.",
+    "url": "https://github.com/arisonadim"
+  },
+  "plugins": [
+    {
+      "name": "usage-stat-cc-kit",
+      "source": "./plugins/usage-stat-cc-kit",
+      "description": "Usage statistics plugin for Claude Code"
+    }
+  ]
+}
