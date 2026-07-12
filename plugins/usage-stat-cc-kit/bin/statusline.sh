@@ -1,7 +1,9 @@
 #!/bin/bash
 input=$(cat)
-used=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // 0')
-reset=$(echo "$input" | jq -r '.rate_limits.five_hour.resets_at // 0')
+used=$(echo "$input" | grep -o '"used_percentage":[0-9.]*' | grep -o '[0-9.]*$')
+reset=$(echo "$input" | grep -o '"resets_at":[0-9]*' | grep -o '[0-9]*$')
+used=${used:-0}
+reset=${reset:-0}
 now=$(date +%s)
 left_sec=$(( reset - now ))
 (( left_sec < 0 )) && left_sec=0

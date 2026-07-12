@@ -38,9 +38,13 @@ The data comes from Claude Code's native status line payload, including fields s
 
 - Zero extra network requests beyond Claude Code itself.
 - Zero background processes.
-- Zero runtime dependencies beyond a POSIX shell and `jq`.
+- Zero runtime dependencies beyond a POSIX shell (`grep`, `awk`, `date`).
 - Native Claude Code marketplace installation flow.
 - Fast enough to run every status line refresh without adding noticeable overhead.
+
+## Requirements
+
+- A bash-compatible shell. Works natively on macOS and Linux. On Windows, use WSL or Git Bash — plain `cmd.exe`/PowerShell is not supported.
 
 ## Install
 
