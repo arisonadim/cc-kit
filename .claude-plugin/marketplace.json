@@ -9,6 +9,11 @@
       "name": "usage-stat-cc-kit",
       "source": "./plugins/usage-stat-cc-kit",
       "description": "Usage statistics plugin for Claude Code"
+    },
+    {
+      "name": "concise-cc-kit",
+      "source": "./plugins/concise-cc-kit",
+      "description": "Skill that makes Claude answer short, direct, and easy to scan"
     }
   ]
 }
